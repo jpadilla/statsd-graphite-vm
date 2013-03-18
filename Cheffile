@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt'
+cookbook 'build-essential'
+
+cookbook 'graphite',
+    :git => 'https://github.com/hectcastro/chef-graphite'
+
+cookbook 'statsd',
+    :git => 'https://github.com/hectcastro/chef-statsd'
+
+cookbook 'nodejs',
+    :git => 'https://github.com/hectcastro/chef-nodejs'
