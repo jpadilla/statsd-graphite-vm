@@ -13,7 +13,7 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 8125, 8125, :protocol => 'udp'
 
   # Upgrade Chef automatically
-  config.vm.provision :shell, :inline => "gem install --no-ri --no-rdoc chef"
+  config.vm.provision :shell, :inline => "gem install --no-ri --no-rdoc chef -v '=11.4.2'"
 
   config.vm.provision :chef_solo do |chef|
 
