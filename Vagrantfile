@@ -12,6 +12,7 @@ Vagrant::Config.run do |config|
   # computers to access the VM, whereas host only networking does not.
   config.vm.forward_port 80, 8080
   config.vm.forward_port 8125, 8125, :protocol => 'udp'
+  config.vm.forward_port 8126, 8126, :protocol => 'tcp'
 
   config.vm.provision :chef_solo do |chef|
 
